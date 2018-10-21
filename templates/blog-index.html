@@ -1,0 +1,8 @@
+{% for page in paginator.pages -%}
+  <article>
+    {{page.title}}
+    {% if page.draft %}
+    <b>Bug!</b> This draft should not appear in the paginator!
+    {% endif %}
+  </article>
+{%- endfor %}
